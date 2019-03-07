@@ -6,7 +6,7 @@ import MyHeader from '../header/header';
 export default class Main extends React.Component {
   render() {
     return (
-      <View styles={styles.container}>
+      <View style={styles.container}>
         <MyHeader/>
         <ScrollView>
           <CardsContainer/>
