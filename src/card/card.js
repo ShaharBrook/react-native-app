@@ -1,35 +1,54 @@
 import React from 'react';
 import { StyleSheet, Image, Text, View } from 'react-native';
 
-const CONTAINER_HEIGHT = 100;
-
-export default function MyCard() {
+export default function MyCard({title, subitile, icon, timestamp}) {
     return (
       <View style={styles.cardContainer}>
         <Image
           style={styles.image}
-          source={{ uri: 'https://www.dike.lib.ia.us/images/sample-1.jpg/image' }}
+          source={{ uri: icon }}
         />
-        <View style={{ flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
-          <Text>{'Title M'}</Text>
-          <Text>{'Subtitle'}</Text>
+        <View style={styles.textContainer}>
+          <Text style={{fontWeight: 'bold'}}>{title}</Text>
+          <Text>{subitile}</Text>
+          <View style={styles.timestamp}>
+            <Text>{timestamp}</Text>
+          </View>
         </View>
       </View>
     );
 }
 
+const CONTAINER_HEIGHT = 125;
+const BORDER_RADIUS = 10;
+const TEXT_CONTAINER_PADDING = 10;
+
 const styles = StyleSheet.create({
   cardContainer: { 
     height: CONTAINER_HEIGHT, 
-    margin: 24,
+    marginTop: 6,
+    marginRight: 12,
+    marginLeft: 12,
     display: 'flex',
     flexDirection: 'row',
   },
   image: {
     width: CONTAINER_HEIGHT,
     height: CONTAINER_HEIGHT,
-    borderRadius: 8,
-    borderTopRightRadius: 0,
-    borderBottomRightRadius: 0,
+    borderTopLeftRadius: BORDER_RADIUS,
+    borderBottomLeftRadius: BORDER_RADIUS,
+  },
+  textContainer: { 
+    flex: 1,
+    position: 'relative',
+    padding: TEXT_CONTAINER_PADDING,
+    backgroundColor: '#F3F3F3',
+    borderTopRightRadius: BORDER_RADIUS,
+    borderBottomRightRadius: BORDER_RADIUS,
+  },
+  timestamp: {
+    position: 'absolute',
+    bottom: TEXT_CONTAINER_PADDING,
+    left: TEXT_CONTAINER_PADDING,
   }
 });
