@@ -57,8 +57,8 @@ export default class CardsContainer extends React.Component {
         return (
             <View style={styles.container}>
             {
-                data.map(
-                    (cardData, index) => <MyCard 
+                data.map((cardData, index) => 
+                    <MyCard 
                         key={`card-${index}`}
                         {...cardData}/>
                 )
