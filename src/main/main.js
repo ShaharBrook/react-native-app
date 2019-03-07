@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
 import CardsContainer from '../cards-container/cardsContainer';
 import MyHeader from '../header/header';
+import MyFooter from '../footer/footer';
 
 export default class Main extends React.Component {
   render() {
@@ -11,6 +12,7 @@ export default class Main extends React.Component {
         <ScrollView>
           <CardsContainer/>
         </ScrollView>
+        <MyFooter/>
       </View>
     );
   }
