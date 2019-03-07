@@ -2,9 +2,8 @@ import React from 'react';
 import { StyleSheet, Image, Text, View } from 'react-native';
 
 export default function MyCard({title, subitile, icon, timestamp}) {
-    const parseTimestamp = (timestamp) => {
-      return (new Date(timestamp)).toGMTString();
-    }
+    const parseTimestamp = (timestamp) => (new Date(timestamp)).toGMTString();
+    
     return (
       <View style={styles.cardContainer}>
         <Image
@@ -15,7 +14,7 @@ export default function MyCard({title, subitile, icon, timestamp}) {
           <Text style={{fontWeight: 'bold'}}>{title}</Text>
           <Text>{subitile}</Text>
           <View style={styles.timestamp}>
-            <Text>{parseTimestamp(timestamp)}</Text>
+            <Text style={{color: '#b0b0b0' }}>{parseTimestamp(timestamp)}</Text>
           </View>
         </View>
       </View>
