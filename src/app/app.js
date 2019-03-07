@@ -1,11 +1,13 @@
 import React from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
 import CardsContainer from '../cards-container/cardsContainer';
+import MyHeader from '../header/header';
 
-export default class App extends React.Component {
+export default class VisibleApp extends React.Component {
   render() {
     return (
       <View styles={styles.container}>
+        <MyHeader/>
         <ScrollView>
           <CardsContainer/>
         </ScrollView>
