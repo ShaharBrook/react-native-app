@@ -22,22 +22,23 @@ export default function MyCard({title, subitile, icon, timestamp}) {
     );
 }
 
-const CONTAINER_HEIGHT = 125;
+const CARD_CONTAINER_HEIGHT = 125;
 const BORDER_RADIUS = 10;
 const TEXT_CONTAINER_PADDING = 10;
+const CARD_MARGIN = 12;
 
 const styles = StyleSheet.create({
   cardContainer: { 
-    height: CONTAINER_HEIGHT, 
-    marginTop: 6,
-    marginRight: 12,
-    marginLeft: 12,
+    height: CARD_CONTAINER_HEIGHT, 
+    marginTop: CARD_MARGIN,
+    marginRight: CARD_MARGIN,
+    marginLeft: CARD_MARGIN,
     display: 'flex',
     flexDirection: 'row',
   },
   image: {
-    width: CONTAINER_HEIGHT,
-    height: CONTAINER_HEIGHT,
+    width: CARD_CONTAINER_HEIGHT,
+    height: CARD_CONTAINER_HEIGHT,
     borderTopLeftRadius: BORDER_RADIUS,
     borderBottomLeftRadius: BORDER_RADIUS,
   },
