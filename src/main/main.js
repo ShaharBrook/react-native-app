@@ -3,7 +3,7 @@ import { StyleSheet, View, ScrollView } from 'react-native';
 import CardsContainer from '../cards-container/cardsContainer';
 import MyHeader from '../header/header';
 
-export default class VisibleApp extends React.Component {
+export default class Main extends React.Component {
   render() {
     return (
       <View styles={styles.container}>

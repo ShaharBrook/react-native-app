@@ -1,10 +1,10 @@
 import React from 'react';
 import { AppRegistry } from 'react-native';
-import VisibleApp from './src/app/app';
+import Main from './src/main/main';
 
 export default function App() {
   return (
-      <VisibleApp />
+      <Main />
   );
 }
 

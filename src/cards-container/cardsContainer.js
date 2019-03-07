@@ -70,9 +70,9 @@ export default class CardsContainer extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-    height: '100%',
-    overflow: 'scroll',
-    backgroundColor: '#F7F9F6',
+        height: '100%',
+        overflow: 'scroll',
+        backgroundColor: '#F7F9F6',
     },
 });
   
